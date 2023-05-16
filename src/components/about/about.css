@@ -1,0 +1,74 @@
+.pentagon {
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: grid;
+  place-content: center;
+}
+
+.pentagon::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  background-color: #f5f5f5;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.pentagon::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 20rem);
+  height: calc(100% + 10rem);
+
+  background: linear-gradient(
+    90deg,
+    rgb(119, 144, 215) 10%,
+    rgba(9, 227, 56, 1) 2%,
+    rgba(255, 0, 236, 1) 100%
+  );
+  /* left: 50%;
+  top: 50%; */
+  animation: animateCraw 10s linear infinite;
+  transform-origin: center;
+}
+
+.skills-div-1 {
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.skills-div-2 {
+    left: 30%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
+
+  .skills-div-3 {
+    right: 13%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
+
+  .skills-div-4 {
+    right: 13%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .skills-div-5 {
+    left: 35%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+@keyframes animateCraw {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
